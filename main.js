@@ -307,7 +307,8 @@ function BuildForMultipleRules(){
                 if(filteredList[i] == unwantedItems[j]){
                     filteredList.splice(i,1);
                     //because the fileteredList array size goes down after splice
-                    i--;
+                    //i--;
+                    j--;
                 } 
             }
         }
@@ -337,7 +338,8 @@ function BuildForMultipleRules(){
                 if(filteredList[i] == unwantedItems[j]){
                     filteredList.splice(i,1);
                     //because the fileteredList array size goes down after splice
-                    i--;
+                    //i--;
+                    j--;
                 }
             }
         }
@@ -351,21 +353,21 @@ function BuildForMultipleRules(){
 //from the filtered list.
 function buildForOnlyStartsWith(){
     fillFilteredListInitial();
+
     for(let i = 0; i < listOfPhoneNumbers.length; i++){
-           for(let j = 0; j < userRuleStartsWith.length; j++){
-               if(userRuleStartsWith[j].length == 4){
-                    if(listOfPhoneNumbers[i].startsWitFour == userRuleStartsWith[j]){
-                        unwantedItems.push(listOfPhoneNumbers[i].phoneNumber);
-                        //does extra check thats not needed
-                    }
-               }
-               if(userRuleStartsWith[j].length == 3){
-                    if(listOfPhoneNumbers[i].startsWithThree == userRuleStartsWith[j]){
-                        unwantedItems.push(listOfPhoneNumbers[i].phoneNumber);
-                    }
-               }
-           }
-    }
+        for(let j = 0; j < userRuleStartsWith.length; j++){
+            if(userRuleStartsWith[j].length == 4){
+                 if(listOfPhoneNumbers[i].startsWithFour == userRuleStartsWith[j]){
+                     unwantedItems.push(listOfPhoneNumbers[i].phoneNumber);
+                 }    
+            }
+            if(userRuleStartsWith[j].length == 3){
+                 if(listOfPhoneNumbers[i].startsWithThree == userRuleStartsWith[j]){
+                     unwantedItems.push(listOfPhoneNumbers[i].phoneNumber);
+                 }
+             }
+        }
+ }
 
     for(let i = 0; i < filteredList.length; i++){
         for(let j = 0; j < unwantedItems.length; j++){
@@ -418,6 +420,9 @@ function buildForOnlyEndsWith(){
             }
         }
     }
+
+    //cleaningup removed items
+    unwantedItems.length = 0;
 
 }
 
