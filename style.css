@@ -120,7 +120,12 @@
   .btn:hover {
     background: #444;
   }
-  
+  .btn-green:hover {
+    background: rgb(47, 255, 99);
+  }
+  .btn-red:hover {
+    background: darkred;
+  }
   .bg-dark {
     background: #333;
     color: #fff;
