@@ -212,7 +212,7 @@ function displayRulesDigitForUserList(value){
    const userRule = rulesInput.options[rulesInput.selectedIndex].text;
    
    const li =document.createElement('li');
-   li.appendChild(document.createTextNode(`${userRule.substring(9)}=>${value}`));
+   li.appendChild(document.createTextNode(`${userRule}=>${value}`));
    rulesList.appendChild(li);
    
    //clears the field for the user
