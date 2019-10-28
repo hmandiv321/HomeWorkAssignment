@@ -45,9 +45,6 @@ function createPhoneNumber(userProvidedNumber){
     let pattern = "[0-9]{7}";
     userProvidedNumber = userProvidedNumber.match(pattern);
 
-    //test to see userProvidedNumber
-    console.log(`userProvidedNumber from createPhoneNumber ${userProvidedNumber}`)
-
     //create phone number
     const newPhone = new phone(userProvidedNumber);
 
@@ -68,9 +65,6 @@ function onSubmit(event){
         
         //building the user phone list
         buildTheUserPhoneList(userInputPhoneNumber);
-        
-        //Testing the phoneArray
-        console.log(listOfPhoneNumbers)
 
         //clear fields
         numberInput.value = '';
@@ -105,9 +99,6 @@ function onAdd(event){
         //cleaning user input
         numberEnteredInput.value = (numberEnteredInput.value).match(pattern);
 
-        //testing numberEnteredInput.value
-        console.log(`user Input for filer ==>${numberEnteredInput.value}`);
-
         // add numberEnteredInput to either userRule_StartsWith array or
         // userRule_EndsWith array
         //and returns true if the digit was added
@@ -117,14 +108,6 @@ function onAdd(event){
         //display the user
         if(digitsAdded){
             displayRulesDigitForUserList(numberEnteredInput.value);
-        }
-
-        //test to check userRule_StartsWith array
-        console.log(userRuleStartsWith);
-
-        
-        //test to check userRule_EndsWith array
-        console.log(userRuleEndsWith);
     }
     
     // if the user input for the rule did not mathc the requirements 
@@ -145,23 +128,15 @@ function onAdd(event){
 //other ==> after the filter process the filtered list is displayed
 function filterList(){  
 
-    console.log(`userRule_StartsWith.length ${userRuleStartsWith.length} and \n 
-                userRule_EndsWith.length ${userRuleEndsWith.length} `);
-
-    console.log(`check==> ${userRuleStartsWith.length > 0 && userRuleEndsWith.length < 1}`);
     //for only startswith
     if(userRuleStartsWith.length > 0 && userRuleEndsWith.length < 1){
         buildForOnlyStartsWith();
     }
-
-    console.log(`check==> ${userRuleStartsWith.length < 1 && userRuleEndsWith.length > 0}`);
     
     //for only endswith
     if(userRuleStartsWith.length < 1 && userRuleEndsWith.length > 0){
         buildForOnlyEndsWith();
     }
-
-    console.log(`check==> ${userRuleStartsWith.length > 0 && userRuleEndsWith.length > 0}`);
     
     //for multiple rules
     if(userRuleStartsWith.length > 0 && userRuleEndsWith.length > 0){
@@ -172,7 +147,6 @@ function filterList(){
     userRuleStartsWith.length = 0;
     userRuleEndsWith.length = 0;
 
-    console.log(filteredList);
     
     //increases counter to indicate the number of time filter is used
     //so that filtered list display can be cleaned up
@@ -182,8 +156,6 @@ function filterList(){
         showFilteredListToUser();
         filteredList.length = 0
 
-    //test
-    //console.log(showFilteredListToUser());
 }
 
 //starts over fresh
@@ -252,10 +224,7 @@ function displayRulesDigitForUserList(value){
 function addingUserRuleToUserRule_StartsWithAndUserRule_EndsWithArrays(){
 
     //get the user rule selected
-    const userRule = rulesInput.options[rulesInput.selectedIndex].value
-
-    //test to check the user rule is properly selected
-    console.log(userRule);
+    const userRule = rulesInput.options[rulesInput.selectedIndex].value;
 
     // if rule starts With is selected then push that value into the 
     //userRule_StartsWith array
@@ -372,7 +341,6 @@ function BuildForMultipleRules(){
             }
         }
     }
-       console.log(`BuildStartsWith second ==> ${filteredList}`)
 }
 
 //Use ==> if the user selects only one rule
@@ -397,7 +365,7 @@ function buildForOnlyStartsWith(){
                }
            }
     }
-    console.log(`startswith new27 ==> ${unwantedItems}`);
+
     for(let i = 0; i < filteredList.length; i++){
         for(let j = 0; j < unwantedItems.length; j++){
             if(filterList[i] !== null && filteredList[i] !== undefined){
