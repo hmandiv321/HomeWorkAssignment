@@ -259,7 +259,7 @@ function addingUserRuleToUserRule_StartsWithAndUserRule_EndsWithArrays(){
 function errorMsgForUserRule(){
     
     errorMsg.classList.add('error');
-    errorMsg.innerHTML = 'please enter a 3 digit number only';
+    errorMsg.innerHTML = 'please enter a 3 or 4 digit number only';
     setTimeout(()=>errorMsg.remove(),3000);    
 }
 
