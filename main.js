@@ -108,6 +108,7 @@ function onAdd(event){
         //display the user
         if(digitsAdded){
             displayRulesDigitForUserList(numberEnteredInput.value);
+        }
     }
     
     // if the user input for the rule did not mathc the requirements 
