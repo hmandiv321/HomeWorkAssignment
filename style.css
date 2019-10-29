@@ -106,6 +106,17 @@
     border-radius: 5px;
     margin: 5px 0;
   }
+  
+  .btn-drop {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: lightblue;
+    color: black;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
 
   .btn-green {
     display: block;
@@ -116,6 +127,9 @@
     color: #fff;
     border-radius: 5px;
     margin: 5px 0;
+  }
+  .btn-drop:hover {
+    
   }
   .btn:hover {
     background: #444;
