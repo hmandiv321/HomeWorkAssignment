@@ -1,3 +1,8 @@
+# How to  use the application
+First, download the zip file and extract. Next open the index.html file in either edge or chrome browser to run the application. 
+
+No internet connection is required to run the app.
+
 # HomeWorkAssignment
 
 The goal is, to take phone numbers as input, and apply a list of rules, then returns the resulting list after the rules are applied.
