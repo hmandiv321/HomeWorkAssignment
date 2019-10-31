@@ -17,7 +17,6 @@ let unwantedItems = [];
 let userRuleStartsWith = [];
 let userRuleEndsWith = [];
 let filteredList = [];
-//let counterForFilterList = 0;
 
 
 //phone object that creates starts with three and four properties
@@ -147,11 +146,6 @@ function filterList(){
     //makes the userRule_StartsWith and userRule_EndsWith array empty after filtration
     userRuleStartsWith.length = 0;
     userRuleEndsWith.length = 0;
-
-    
-    //increases counter to indicate the number of time filter is used
-    //so that filtered list display can be cleaned up
-    //counterForFilterList++;
 
     //show user the filtered list
         showFilteredListToUser();
@@ -314,7 +308,7 @@ function BuildForMultipleRules(){
         }
     }
 
-    //cleaningup removed items
+    //cleaningup unwantedItems array 
     unwantedItems.length = 0;
 
     for(let i = 0; i < listOfPhoneNumbers.length; i++){
@@ -344,7 +338,7 @@ function BuildForMultipleRules(){
             }
         }
     }
-    //cleaningup removed items
+    //cleaningup unwantedItems array 
     unwantedItems.length = 0;
 }
 
@@ -384,7 +378,7 @@ function buildForOnlyStartsWith(){
         }
     }
 
-    //cleaningup removed items
+    //cleaningup unwantedItems array 
     unwantedItems.length = 0;
 }
 
@@ -423,7 +417,7 @@ function buildForOnlyEndsWith(){
         }
     }
 
-    //cleaningup removed items
+    //cleaningup unwantedItems array 
     unwantedItems.length = 0;
 
 }
