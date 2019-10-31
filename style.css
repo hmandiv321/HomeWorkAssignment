@@ -34,16 +34,16 @@
   }
 
   /* Floating column for labels: 25% width */
-.col-25 {
+.col-35 {
   float: left;
-  width: 25%;
+  width: 35%;
   margin-top: 6px;
 }
 
 /* Floating column for inputs: 75% width */
-.col-75 {
+.col-50 {
   float: left;
-  width: 75%;
+  width: 50%;
   margin-top: 6px;
 }
 
