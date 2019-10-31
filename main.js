@@ -254,7 +254,11 @@ function errorMsgForUserRule(){
     
     errorMsg.classList.add('error');
     errorMsg.innerHTML = 'please enter a 3 or 4 digit number only';
-    setTimeout(()=>errorMsg.remove(),3000);    
+    //cleans out the error msg
+    setTimeout(function(){
+        errorMsg.classList.remove('error');
+        errorMsg.innerHTML = '';
+    },3000);
 }
 
 //Summary ==> cleans up rules display
