@@ -17,7 +17,7 @@ let unwantedItems = [];
 let userRuleStartsWith = [];
 let userRuleEndsWith = [];
 let filteredList = [];
-let counterForFilterList = 0;
+//let counterForFilterList = 0;
 
 
 //phone object that creates starts with three and four properties
@@ -151,7 +151,7 @@ function filterList(){
     
     //increases counter to indicate the number of time filter is used
     //so that filtered list display can be cleaned up
-    counterForFilterList++;
+    //counterForFilterList++;
 
     //show user the filtered list
         showFilteredListToUser();
@@ -344,6 +344,8 @@ function BuildForMultipleRules(){
             }
         }
     }
+    //cleaningup removed items
+    unwantedItems.length = 0;
 }
 
 //Use ==> if the user selects only one rule
