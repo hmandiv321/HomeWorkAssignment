@@ -16,7 +16,8 @@
 
             <div>
                 <label for="phoneNumber">Input:</label>
-                <input type="text" id="phoneNumber" pattern="[0-9]{7}" placeholder="9293404" required 
+                <input type="text" id="phoneNumber" pattern="[0-9]{7}" 
+                placeholder="Please Enter a 7 digit Phone number" required 
                 oninvalid="this.setCustomValidity('Please Enter a 7 digit Phone number ==> 9293404')"
                 oninput="setCustomValidity('')">  
                 
@@ -33,7 +34,8 @@
             
             <div>
                 <label for="numberEntered">Number:</label>
-                <input type="text" id="numberEntered" pattern="[0-9]{3,4}" placeholder="929" 
+                <input type="text" id="numberEntered" pattern="[0-9]{3,4}" 
+                placeholder="please enter a 3 or 4 digit number only" 
                 oninvalid="this.setCustomValidity('Please Enter valid 3 or 4 digit number ==> 929')"
                 oninput="setCustomValidity('')">
                 
