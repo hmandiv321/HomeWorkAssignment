@@ -47,7 +47,7 @@ function createPhoneNumber(userProvidedNumber){
     
 }
 
-//accepts an event 
+
 //summary ==>used when the user clicks the "Enter Number" btn 
 //builds the list of phone
 function onSubmit(){
@@ -66,7 +66,7 @@ function onSubmit(){
     }     
 }
 
-//accepts an event
+
 //summary ==> used when the user clicks on the "ADD" button
 //adds the user rule digits
 //others==> when a user wants to filter with different digits
