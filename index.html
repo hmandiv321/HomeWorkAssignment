@@ -21,7 +21,7 @@
                 oninvalid="this.setCustomValidity('Please Enter a 7 digit Phone number ==> 9293404')"
                 oninput="setCustomValidity('')">  
                 
-                <input type="submit" value="Enter Number" class="btn">
+                <input type="button" onclick="onSubmit()" value="Enter Number" class="btn">
             </div>
             
             <div>
@@ -41,7 +41,7 @@
                 
                 <div class='msg'></div>
                 
-                <input type="reset" value="Add" class="btn-green">
+                <input type="button" onclick="onAdd()" value="Add" class="btn-green">
             </div>
             
             <input type="button" onclick="filterList()" value="Filter List" class="btn">

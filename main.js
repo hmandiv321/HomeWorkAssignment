@@ -1,5 +1,3 @@
-
-  
 const myForm = document.querySelector('#my-form');
 const errorMsg = document.querySelector('.msg');
 const numberInput = document.querySelector('#phoneNumber');
@@ -9,8 +7,6 @@ const userList = document.querySelector('#users');
 const rulesList = document.querySelector('#rulesList');
 const resultList = document.querySelector('#results');
 
-myForm.addEventListener('submit', onSubmit);
-myForm.addEventListener('reset', onAdd);
 
 let listOfPhoneNumbers = [];
 let unwantedItems = [];
@@ -54,8 +50,7 @@ function createPhoneNumber(userProvidedNumber){
 //accepts an event 
 //summary ==>used when the user clicks the "Enter Number" btn 
 //builds the list of phone
-function onSubmit(event){
-    event.preventDefault();
+function onSubmit(){
 
     if(numberInput.value !==''){
     
@@ -78,9 +73,7 @@ function onSubmit(event){
 //with the same list of phone numbers the, the rules dislpay and
 // and filtered number display is cleaned and repopulates with new 
 //rule digits
-function onAdd(event){
-
-    event.preventDefault();
+function onAdd(){
 
     //if the user wants to do a new filter on the same l
     //list of phone number then clean result list
