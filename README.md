@@ -1,8 +1,13 @@
 # How to  use the application
+
 Sorry for the inconviences ==>
+
 click this for desktop:http://www.filterphonedesktop.com.s3-website-us-east-1.amazonaws.com/
+
 click this for mobile: http://www.filterphonenumber.com.s3-website.us-east-2.amazonaws.com
+
 OR
+
 First, download the zip file and extract. Next open the index.html file in either edge or chrome browser to run the application. 
 
 No internet connection is required to run the app.
