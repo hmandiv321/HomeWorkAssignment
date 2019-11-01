@@ -45,12 +45,12 @@ function createPhoneNumber(userProvidedNumber){
     //checking if the user provided number was proper
     if(tempUserProvidedNumber !== userProvidedNumber || userProvidedNumber == ''){
         errorMsgForPhoneNumberInput();
+    }else{
+         //create phone number
+        const newPhone = new phone(userProvidedNumber);
+
+        return newPhone;
     }
-
-    //create phone number
-    const newPhone = new phone(userProvidedNumber);
-
-    return newPhone;
     
 }
 
