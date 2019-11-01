@@ -14,6 +14,8 @@ No internet connection is required to run the app.
 
 # HomeWorkAssignment
 
+Giving UI target: https://wireframe.cc/zENMEV
+
 The goal is, to take phone numbers as input, and apply a list of rules, then returns the resulting list after the rules are applied.
 
 For example, Given the list of ["555-0123", "214-5425", "706-4253"] and the rule "Does not start with 555", it returns  ["214-5425", "706-4253"]
