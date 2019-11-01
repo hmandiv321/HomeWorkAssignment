@@ -1,5 +1,6 @@
 const myForm = document.querySelector('#my-form');
 const errorMsg = document.querySelector('.msg');
+const msgEnterNumber = document.querySelector('.msgEnterNumber');
 const numberInput = document.querySelector('#phoneNumber');
 const numberEnteredInput = document.querySelector('#numberEntered');
 const rulesInput = document.querySelector('#rule');
@@ -36,9 +37,15 @@ class phone{
 //returns ==> a new phone object
 function createPhoneNumber(userProvidedNumber){
     //check params
+     let tempUserProvidedNumber = userProvidedNumber;
     //user phone number expected pattern
     let pattern = "[0-9]{7}";
     userProvidedNumber = userProvidedNumber.match(pattern);
+
+    //checking if the user provided number was proper
+    if(tempUserProvidedNumber !== userProvidedNumber || userProvidedNumber == ''){
+        errorMsgForPhoneNumberInput();
+    }
 
     //create phone number
     const newPhone = new phone(userProvidedNumber);
@@ -251,6 +258,18 @@ function errorMsgForUserRule(){
     setTimeout(function(){
         errorMsg.classList.remove('error');
         errorMsg.innerHTML = '';
+    },3000);
+}
+
+//if the user input for the phone numbers are wrong then this error message is used
+function errorMsgForPhoneNumberInput(){
+    
+    msgEnterNumber.classList.add('error');
+    msgEnterNumber.innerHTML = 'Please Enter a 7 digit Phone number ==> 9293404';
+    //cleans out the error msg
+    setTimeout(function(){
+        msgEnterNumber.classList.remove('error');
+        msgEnterNumber.innerHTML = '';
     },3000);
 }
 
