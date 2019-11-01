@@ -9,46 +9,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-    <section class="container col-50" >
+     <section class="container col-25" >
         <form id="my-form">
             <h1>Phone Filter</h1>
+            <div>
+              <label for="phoneNumber">Input:</label>
+              <input type="text" id="phoneNumber" pattern="[0-9]{7}" 
+              placeholder="Please Enter a 7 digit Phone number Ex:2034506">		
 
-            <div>
-                <label for="phoneNumber">Input:</label>
-                <input type="text" id="phoneNumber" pattern="[0-9]{7}" 
-                placeholder="Please Enter a 7 digit Phone number Ex:2034506"> 		
-
-                <input type="button" onclick="onSubmit()" value="Enter Number" class="btn">
-            </div>
-            
-            <div>
-                <label for="rule">Rules:</label>
-                <select id="rule" class="btn-drop">
-                    <option class="btn" value="1">Does not start with</option>
-                    <option class="btn" value="2">Does not end with</option>
-                </select>
-            </div>
-            
-            <div>
-                <label for="numberEntered">Number:</label>
-                <input type="text" id="numberEntered" pattern="[0-9]{3,4}" 
-                placeholder="please enter a 3 or 4 digit number only" 
-                oninvalid="this.setCustomValidity('Please Enter valid 3 or 4 digit number ==> 929')"
-                oninput="setCustomValidity('')">
-                
-                <div class='msg'></div>
-                
-                <input type="button" onclick="onAdd()" value="Add" class="btn-green">
-            </div>
-            
-            <input type="button" onclick="filterList()" value="Filter List" class="btn">
-            <input type="button" onclick="startAgain()" value="Restart" class="btn-red">
-          </form>
-    
-      </section>  
-      <section class="container col-35">
-          <form id="my-form">
+              <input type="button" onclick="onSubmit()" value="Enter Number" class="btn">
+          </div>
             <table>
               <tr>
                 <th class="btn"><label for="users">Phone Numbers</label></th>
@@ -56,21 +26,55 @@
               <tr>
                 <td id="users"></td>   
               </tr>
-              <tr>
-                  <th class="btn"><label for="rulesList">Rules</label></th>
-                  <tr>
-                      <td id="rulesList"></td>
-                  </tr>
-              </tr>
-              <tr>
-                  <th class="btn"><label for="results">Filtered Phone Numbers</label></th>
-                  <tr>
-                      <td id="results"></td>
-                  </tr>
-              </tr>
-            </table> 
-         </form>
+            </table>
+          </form>
       </section>
+      <section class="container col-25" >
+          <form id="my-form">
+                <div>
+                    <label for="rule"><h3>Rules:</h3></label>
+                    <select id="rule" class="btn-drop">
+                        <option class="btn" value="1">Does not start with</option>
+                        <option class="btn" value="2">Does not end with</option>
+                    </select>
+                </div>
+                <div>
+                  <label for="numberEntered">Number:</label>
+                  <input type="text" id="numberEntered" pattern="[0-9]{3,4}" 
+                  placeholder="please enter a 3 or 4 digit number only" 
+                  oninvalid="this.setCustomValidity('Please Enter valid 3 or 4 digit number ==> 929')"
+                  oninput="setCustomValidity('')">
+                  
+                <div class='msg'></div>
+                  
+                  <input type="button" onclick="onAdd()" value="Add" class="btn-green">
+                </div>
+              
+              <input type="button" onclick="filterList()" value="Filter List" class="btn">
+              <input type="button" onclick="startAgain()" value="Restart" class="btn-red">
+
+              <table>
+                <tr>
+                  <th class="btn"><label for="rulesList">Rules</label></th>
+                </tr>
+                <tr>
+                  <td id="rulesList"></td>   
+                </tr>
+              </table>
+          </form>
+      </section>
+      <section class="container col-25" >
+          <form id="my-form">
+                <table>
+                  <tr>
+                    <th class="btn"><label for="results">Filtered Phone Numbers</label></th>
+                  </tr>
+                  <tr>
+                    <td id="results"></td>   
+                  </tr>
+                </table>
+          </form>
+      </section>    
     <script src="main.js"></script>
   </body>
 </html>
