@@ -14,7 +14,7 @@ No internet connection is required to run the app.
 
 # HomeWorkAssignment
 
-Giving UI target: https://wireframe.cc/zENMEV
+Given UI target: https://wireframe.cc/zENMEV
 
 The goal is, to take phone numbers as input, and apply a list of rules, then returns the resulting list after the rules are applied.
 
