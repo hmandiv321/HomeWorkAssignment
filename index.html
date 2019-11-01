@@ -10,7 +10,7 @@
   </head>
   <body>
      <section class="container col-25" >
-        <form id="my-form">
+        <div id="my-form">
             <h1>Phone Filter</h1>
             <div>
               <label for="phoneNumber">Input:</label>
@@ -27,10 +27,10 @@
                 <td id="users"></td>   
               </tr>
             </table>
-          </form>
+          </div>
       </section>
       <section class="container col-25" >
-          <form id="my-form">
+          <div id="my-form">
                 <div>
                     <label for="rule"><h3>Rules:</h3></label>
                     <select id="rule" class="btn-drop">
@@ -47,7 +47,7 @@
                   
                 <div class='msg'></div>
                   
-                  <input type="button" onclick="onAdd()" value="Add" class="btn-green">
+                  <input type="button" onclick="onAdd()"  value="Add" class="btn-green">
                 </div>
               
               <input type="button" onclick="filterList()" value="Filter List" class="btn">
@@ -61,10 +61,10 @@
                   <td id="rulesList"></td>   
                 </tr>
               </table>
-          </form>
+            </div>
       </section>
       <section class="container col-25" >
-          <form id="my-form">
+          <div id="my-form">
                 <table>
                   <tr>
                     <th class="btn"><label for="results">Filtered Phone Numbers</label></th>
@@ -73,7 +73,7 @@
                     <td id="results"></td>   
                   </tr>
                 </table>
-          </form>
+              </div>
       </section>    
     <script src="main.js"></script>
   </body>
