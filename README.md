@@ -2,9 +2,9 @@
 
 Sorry for the inconviences ==>
 
-click this for desktop:http://www.filterphonedesktop.com.s3-website-us-east-1.amazonaws.com/
+click this for desktop/tablets/laptops:http://www.filterphonedesktop.com.s3-website-us-east-1.amazonaws.com/
 
-click this for mobile: http://www.filterphonenumber.com.s3-website.us-east-2.amazonaws.com
+click this for cell phones: http://www.filterphonenumber.com.s3-website.us-east-2.amazonaws.com
 
 OR
 
