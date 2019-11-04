@@ -86,23 +86,24 @@ function onSubmit(){
 //rule digits
 function onAdd(){
 
-    //if list of phone numbers is empty then tell the user to enter atleast one number
-    if(listOfPhoneNumbers.length == 0){
-        let message = "Please enter at least one phone number";
-        errorMsgForUser(message, errorMsg);
-    }else{
-            //if the user wants to do a new filter on the same l
-        //list of phone number then clean result list
-        if(userRuleEndsWith.length == 0 && userRuleStartsWith.length == 0){
-            cleanRulestList();
-            cleanResultList();
-        }
-        
-        //user rule inputs expected pattern
-        let pattern = "[0-9]{3,4}";
-        
-        //checks if user input is only 3  digits long
-        if(!(numberEnteredInput.length == 3 || numberEnteredInput.length == 4)){
+    let pattern = "[0-9]{3,4}";
+    let temp = numberEnteredInput.value;
+    let testInput = temp.match(pattern);
+
+    //if user input is not empty and input is correct then peoceed
+    //else tell the user the correct form of input
+    if(numberEnteredInput.value !=='' && numberEnteredInput.value == testInput ){
+        //if list of phone numbers is empty then tell the user to enter atleast one number
+        if(listOfPhoneNumbers.length == 0){
+            let message = "Please enter at least one phone number";
+            errorMsgForUser(message, errorMsg);
+        }else{
+                //if the user wants to do a new filter on the same l
+            //list of phone number then clean result list
+            if(userRuleEndsWith.length == 0 && userRuleStartsWith.length == 0){
+                cleanRulestList();
+                cleanResultList();
+            }
 
             //cleaning user input
             numberEnteredInput.value = (numberEnteredInput.value).match(pattern);
@@ -112,24 +113,16 @@ function onAdd(){
             //and returns true if the digit was added
             let digitsAdded = addingUserRuleToUserRule_StartsWithAndUserRule_EndsWithArrays();
 
-
             //display the user
             if(digitsAdded){
                 displayRulesDigitForUserList(numberEnteredInput.value);
             }
+            
         }
-        
-        // if the user input for the rule did not mathc the requirements 
-        //then an error message is displayed
-        //if user input for rules are not good then the userRule_StartsWith
-        //and userRule_EndsWith arrays stay empty.
-        if(userRuleStartsWith.length == 0 && userRuleEndsWith.length == 0){
-            let message = "please enter a 3 or 4 digit number only";
-            errorMsgForUser(message, errorMsg);
-        }
+    }else{
+        let message = "please enter a 3 or 4 digit number only";
+        errorMsgForUser(message, errorMsg);
     }
-
-    
         
 }
 
