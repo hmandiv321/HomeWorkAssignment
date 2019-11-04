@@ -71,7 +71,8 @@ function onSubmit(){
         numberInput.value = '';
     
     }else{
-        //errorMsgForIncorrectPhoneNumberEntered();
+        // if the user input for the phone number input did not match  
+        //the requirements then an error message is displayed
         let message = "Please Enter a 7 digit Phone number Ex:2034506";
             errorMsgForUser(message, phoneNumberEnteredErrorMsg);
     }     
@@ -120,6 +121,8 @@ function onAdd(){
             
         }
     }else{
+        // if the user input for the rule did not match the requirements 
+        //then an error message is displayed
         let message = "please enter a 3 or 4 digit number only";
         errorMsgForUser(message, errorMsg);
     }
