@@ -1,5 +1,6 @@
 const myForm = document.querySelector('#my-form');
 const errorMsg = document.querySelector('.msg');
+const phoneNumberEnteredErrorMsg = document.querySelector('.phoneNumberEnteredErrorMsg');
 const numberInput = document.querySelector('#phoneNumber');
 const numberEnteredInput = document.querySelector('#numberEntered');
 const rulesInput = document.querySelector('#rule');
@@ -51,8 +52,14 @@ function createPhoneNumber(userProvidedNumber){
 //summary ==>used when the user clicks the "Enter Number" btn 
 //builds the list of phone
 function onSubmit(){
+    //used to check if the user input for phone number if correct type
+    let pattern = "[0-9]{7}";
+    let temp = numberInput.value;
+    let testInput = temp.match(pattern);
 
-    if(numberInput.value !==''){
+    //if user input is not empty and input is correct then peoceed
+    //else tell the user the correct form of input
+    if(numberInput.value !=='' && numberInput.value == testInput ){
     
         //creates a phone
         let userInputPhoneNumber = createPhoneNumber(numberInput.value);
@@ -63,6 +70,10 @@ function onSubmit(){
         //clear fields
         numberInput.value = '';
     
+    }else{
+        //errorMsgForIncorrectPhoneNumberEntered();
+        let message = "Please Enter a 7 digit Phone number Ex:2034506";
+            errorMsgForUser(message, phoneNumberEnteredErrorMsg);
     }     
 }
 
@@ -77,8 +88,8 @@ function onAdd(){
 
     //if list of phone numbers is empty then tell the user to enter atleast one number
     if(listOfPhoneNumbers.length == 0){
-        let message = "Please enter atleast one phone number";
-        errorMsgForUserRule(message);
+        let message = "Please enter at least one phone number";
+        errorMsgForUser(message, errorMsg);
     }else{
             //if the user wants to do a new filter on the same l
         //list of phone number then clean result list
@@ -114,7 +125,7 @@ function onAdd(){
         //and userRule_EndsWith arrays stay empty.
         if(userRuleStartsWith.length == 0 && userRuleEndsWith.length == 0){
             let message = "please enter a 3 or 4 digit number only";
-            errorMsgForUserRule(message);
+            errorMsgForUser(message, errorMsg);
         }
     }
 
@@ -251,16 +262,18 @@ function addingUserRuleToUserRule_StartsWithAndUserRule_EndsWithArrays(){
     return false;
 }
 
-//parameter==> takes a string as input
-//if the user input for the rules are wrong then this error message is used
-function errorMsgForUserRule(msg){
+//parameter==> takes a string as input, and the element or in this case
+// the div
+//Summary==> if the user input for the rules are wrong or phone number entered
+// does not match the requested pattern then this error message is used
+function errorMsgForUser(msg, divClass){
     
-    errorMsg.classList.add('error');
-    errorMsg.innerHTML = msg.toString();
+    divClass.classList.add('error');
+    divClass.innerHTML = msg.toString();
     //cleans out the error msg
     setTimeout(function(){
-        errorMsg.classList.remove('error');
-        errorMsg.innerHTML = '';
+        divClass.classList.remove('error');
+        divClass.innerHTML = '';
     },3000);
 }
 

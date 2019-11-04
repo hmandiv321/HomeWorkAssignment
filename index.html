@@ -1,4 +1,4 @@
-<!---Tested to work on Edge and chrome browser (Version 77.0.3865.120 (Official Build) (64-bit))-->
+<!---pattern="[0-9]{7}"Tested to work on Edge and chrome browser (Version 77.0.3865.120 (Official Build) (64-bit))-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +14,9 @@
             <h1>Phone Filter</h1>
             <div>
               <label for="phoneNumber">Input:</label>
-              <input type="text" id="phoneNumber" pattern="[0-9]{7}" 
+              <input type="text" id="phoneNumber"  
               placeholder="Please Enter a 7 digit Phone number Ex:2034506">		
-
+              <div class='phoneNumberEnteredErrorMsg'></div>
               <input type="button" onclick="onSubmit()" value="Enter Number" class="btn">
           </div>
             <table>
