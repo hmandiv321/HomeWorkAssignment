@@ -3,16 +3,17 @@ Step 1. Enter phone number to build your list
 
 Step 2. Add rules to build your rules list
 
+       * The rules list once build can be used only once for one filter, but can be rebuild reapeting step 2. 
+         Read step 3 for more details.
+
 Step 3. Click filter list to filter out the the number not wanted
 
-        * If you want to filter the same list of numbers then add new list of rules by simply repating step 2
+        * If you want to filter the same list of numbers then add new list of rules by simply reapeting step 2
         * if you want to filter a new list you can click on the restart button
 
 Step 4. You can add to the existing list of numbers anytime
-        
-        * The rules list is cleaned everytime, after the filter button is pressed.
-        
-        
+       
+         
 # How to  use the application
 
 Sorry for the inconviences ==>
