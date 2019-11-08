@@ -69,6 +69,11 @@ function onSubmit(){
 
         //clear fields
         numberInput.value = '';
+        //clean the filterd result display
+        cleanResultList();
+        
+        //clean the user rules display
+        cleanRulestList();
     
     }else{
         // if the user input for the phone number input did not match  
@@ -158,7 +163,7 @@ function filterList(){
 
     //show user the filtered list
         showFilteredListToUser();
-        filteredList.length = 0
+        filteredList.length = 0;
 
 }
 
