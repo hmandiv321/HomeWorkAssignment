@@ -1,22 +1,20 @@
 # How the app works
-Step 1. Enter phone number to build your list
+Step 1. Enter phone number to build your list.
 
-Step 2. Add rules to build your rules list
+Step 2. Add rules to build your rules list.
 
-       * The rules list once build can be used only once for one filter, but can be rebuild reapeting step 2. 
+       * The rules list once build can be used only once for one filter, but can be rebuild repeating step 2. 
          Read step 3 for more details.
 
-Step 3. Click filter list to filter out the the number not wanted
+Step 3. Click filter list to filter out the the number not wanted.
 
-        * If you want to filter the same list of numbers then add new list of rules by simply reapeting step 2
-        * if you want to filter a new list you can click on the restart button
+        * If you want to filter the same list of numbers then add new list of rules by simply repeating step 2.
+        * if you want to filter a new list you can click on the restart button.
 
-Step 4. You can add to the existing list of numbers anytime
+Step 4. You can add to the existing list of numbers anytime by repeating step 1 or click restart for a fresh start.
        
          
 # How to  use the application
-
-Sorry for the inconviences ==>
 
 click this for desktop/tablets/laptops:http://www.filterphonedesktop.com.s3-website-us-east-1.amazonaws.com/
 
@@ -34,7 +32,7 @@ Given UI target: https://wireframe.cc/zENMEV
 
 The goal is, to take phone numbers as input, and apply a list of rules, then returns the resulting list after the rules are applied.
 
-For example, Given the list of ["555-0123", "214-5425", "706-4253"] and the rule "Does not start with 555", it returns  ["214-5425", "706-4253"]
+For example, Given the list of 5550123, 2145425, 7064253 and the rule "Does not start with 555", it returns 2145425, 7064253.
 
 The Inputs checks that it looks like a phone number, so not empty, no letters, 7 digits long, and does not contain a "-".
 
