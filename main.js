@@ -142,6 +142,13 @@ function onAdd(){
 //other ==> after the filter process the filtered list is displayed
 function filterList(){  
 
+    if(userRuleStartsWith.length == 0 && userRuleEndsWith.length == 0){
+        // if the user clicks filer list button without any rules added 
+        //then an error message is displayed
+        let message = "please enter a rule";
+        errorMsgForUser(message, errorMsg);
+    }
+
     //for only startswith
     if(userRuleStartsWith.length > 0 && userRuleEndsWith.length < 1){
         buildForOnlyStartsWith();
