@@ -72,6 +72,10 @@ function onSubmit(){
         //clean the filterd result display
         cleanResultList();
         
+        //makes the userRuleStartsWith and userRuleEndsWith array empty 
+        // To allow user enter numbers after one or more flitration
+        userRuleStartsWith.length = 0;
+        userRuleEndsWith.length = 0;
         //clean the user rules display
         cleanRulestList();
     
