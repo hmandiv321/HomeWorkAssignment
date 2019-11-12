@@ -1,3 +1,5 @@
+*TODO: Main.js needs refactoring*
+
 # How the app works
 Step 1. Enter phone number to build your list.
 
